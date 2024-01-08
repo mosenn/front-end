@@ -1,0 +1,144 @@
+*,
+::after,
+::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	font-size: 1.2rem;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+menu {
+	width: 100%;
+	display: flex;
+	height: fit-content;
+	justify-content: flex-end;
+}
+.wapper-title-icon {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+.wapper-title-icon > div {
+	padding: 5px;
+	margin-top: 3px;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgb(65, 65, 112);
+	transition: all 0.4s ease-in-out;
+}
+.wapper-title-icon > div:hover {
+	transform: rotateZ(30deg);
+}
+.nav {
+	margin-right: 20px;
+	box-shadow: 5px 5px 5px gray;
+	width: 70%;
+	overflow: hidden;
+	transition: all 0.4s ease-in-out;
+}
+
+.ul {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.ul li a:hover {
+	color: rgb(142, 100, 250);
+}
+menu nav ul li {
+	padding: 5px;
+	background: rgb(255, 255, 255);
+	border-top: 1px solid gray;
+}
+
+menu nav ul li a {
+	background: rgb(255, 255, 255);
+	display: flex;
+	display: flex;
+	justify-content: center;
+}
+.social {
+	display: none;
+}
+.social li a {
+	text-decoration: none;
+}
+.nav-social {
+	border: 1px solid rgb(214, 227, 243);
+	display: flex;
+	align-items: center;
+}
+.social li {
+	border: none;
+	padding: 5px;
+	margin-right: 15px;
+}
+.social li:nth-of-type(1) a {
+	color: rgb(5, 112, 251);
+}
+.social li:nth-of-type(2) a {
+	color: rgb(123, 177, 247);
+}
+
+.social li:nth-of-type(3) a {
+	color: rgb(53, 139, 252);
+}
+
+.social li:nth-of-type(4) a {
+	color: rgb(111, 105, 117);
+}
+
+.social li a:hover {
+	color: rgb(160, 160, 160);
+}
+@media screen and (min-width: 768px) {
+	menu {
+		padding: 15px;
+	}
+
+	menu nav ul li {
+		border: none;
+	}
+	.social {
+		display: flex;
+		padding: 4px;
+	}
+
+	.wapper-title-icon {
+		display: flex;
+		justify-content: center;
+	}
+	.wapper-title-icon > div {
+		display: none;
+	}
+	.nav {
+		height: fit-content;
+		overflow: visible;
+		width: 100%;
+		height: fit-content !important;
+		box-shadow: none;
+	}
+	.ul {
+		border: none;
+		box-shadow: 1px 1px 3px gray;
+		padding: 15px;
+		flex-direction: row;
+		width: 100%;
+		height: fit-content;
+	}
+	.ul li {
+		border: none;
+		width: 100%;
+	}
+}

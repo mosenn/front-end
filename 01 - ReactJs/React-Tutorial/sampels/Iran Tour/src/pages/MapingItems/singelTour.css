@@ -1,0 +1,66 @@
+.main-tours {
+	margin-top: 20px;
+}
+.main-tours > article {
+	border: 1px solid blue;
+}
+.main-tours > article > p {
+	font-weight: bold;
+	margin: 10px;
+}
+.container-btns-tours {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container-btns-tours > button,
+.container-btns-tours > a {
+	border: none;
+	outline: none;
+	border: 1px solid gray;
+	border-radius: 2px;
+	cursor: pointer;
+	margin: 10px;
+	transition: all 0.4s;
+}
+
+.container-btns-tours > button:hover {
+	background: rgba(57, 46, 99, 0.734);
+	color: white;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.container-btns-tours > button[disabled] {
+	background: initial;
+	color: initial;
+	letter-spacing: 0;
+	color: rgba(49, 49, 49, 0.738);
+	border: 1px solid rgba(128, 128, 128, 0.458);
+}
+
+.container-btns-tours > button {
+	padding: 2.5px 10px;
+	font-weight: bold;
+	color: rgb(80, 62, 156);
+}
+.container-btns-tours > a {
+	font-weight: bold;
+	padding: 0px 10px;
+}
+.main-tours > article > figure {
+	border: 1px solid red;
+	margin: 10px;
+}
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+@media screen and (min-width: 768px) {
+	.main-tours {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+	}
+}

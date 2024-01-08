@@ -1,0 +1,26 @@
+div > a {
+	display: block;
+	margin: 25px;
+}
+.search-head {
+	padding: 10px;
+}
+.search-head > form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	padding: 5px;
+}
+.search-head > form > input::placeholder {
+	font-weight: bold;
+	padding: 10px;
+}
+input[name='search'] {
+	margin-right: 10px;
+	padding: 2px;
+	border: 1px solid rgba(128, 128, 128, 0.439);
+}
+input[type='checkbox'] {
+	margin-left: 6px;
+}

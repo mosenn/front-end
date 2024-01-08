@@ -1,0 +1,86 @@
+.App {
+	text-align: center;
+}
+
+.main-slider {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 150px;
+}
+.parent-arrow-btn {
+	width: 100%;
+	max-width: 650px;
+	display: flex;
+	justify-content: space-around;
+	position: absolute;
+}
+
+.parent-arrow-btn > svg:hover {
+	color: darkblue;
+}
+.parent-arrow-btn > svg {
+	font-size: 30px;
+	fill: saddlebrown;
+	background: rgb(255, 255, 255);
+	border-radius: 50%;
+}
+.parent-arrow-btn > svg:nth-of-type(2) {
+	transform: rotate(180deg);
+}
+.main-slider > figure > img {
+	width: 250px;
+}
+
+.main-slider > figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.main-slider > figure > h4 {
+	margin-top: -5px;
+}
+.main-slider > figure > figcaption {
+	width: 250px;
+	border: 1px solid rgba(128, 128, 128, 0.294);
+	padding: 10px;
+	margin-bottom: 15px;
+	line-height: 25px;
+	box-shadow: 2px 2px 5px rgb(196, 196, 211), -2px -2px 5px rgb(196, 196, 211);
+}
+.animateclass {
+	animation: imganimate 1s ease-in-out alternate-reverse;
+}
+
+.animationclassTwo {
+	animation: imganimate2 1s ease-in-out alternate-reverse;
+}
+@keyframes imganimate {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
+@keyframes imganimate2 {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.main-slider > figure > img {
+		object-fit: contain;
+	}
+
+	.main-slider > figure > figcaption {
+		width: 50%;
+	}
+}

@@ -1,0 +1,55 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.App {
+	text-align: center;
+	background: rgba(3, 2, 30, 0.488);
+}
+
+.App > section {
+	margin-top: 20px;
+}
+
+.App > section > form > input {
+	padding: 5px;
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	border: 1px solid gray;
+	font-size: 1rem;
+	font-weight: bold;
+	width: 120px;
+}
+.App > section > article > p {
+	display: block;
+	border: 1px solid rgb(179, 169, 169);
+	margin: 10px 0;
+	padding: 10px;
+	background: rgba(251, 240, 240, 0.402);
+	border-radius: 5px;
+	color: rgb(8, 2, 29);
+}
+.App > section > article {
+	padding: 5px;
+	margin-top: 10px;
+	width: 100%;
+	font-weight: bold;
+	line-height: 35px;
+
+	font-size: 1rem;
+}
+button {
+	padding: 5px;
+	margin: 0 5px;
+	width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+	.App > section > article {
+		max-width: 90%;
+		margin: 10px 5%;
+	}
+}

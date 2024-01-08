@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.App {
+	text-align: center;
+}
+.App form {
+	margin: 20px 0px;
+}
+.App form button {
+	margin-left: 5px;
+	width: 100px;
+}
+
+.container-backgrounds {
+	display: grid;
+	gap: 10px;
+}
+
+.wrapper-colors {
+	border-radius: 5px;
+	margin: 0 10px;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 15px;
+}
+
+@media screen and (min-width: 768px) {
+	.container-backgrounds {
+		display: grid;
+		height: 60vh;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

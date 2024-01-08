@@ -1,0 +1,9 @@
+.coninter-spinner {
+	padding: 15px;
+	margin: 15px;
+}
+@media screen and (min-width: 768px) {
+	.coninter-spinner {
+		grid-column: 2/3;
+	}
+}

@@ -1,0 +1,59 @@
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modalsection {
+	border: 1px solid rgb(219, 219, 219);
+	padding: 15px;
+	margin: 15px;
+	text-align: center;
+	box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.445),
+		-2px -2px 5px rgba(128, 128, 128, 0.445);
+	transition: 0.4s ease-in-out;
+	position: fixed;
+	top: 140px;
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+main > section > article > p {
+	padding-bottom: 5px;
+}
+.modalsection > div {
+	text-align: right;
+	padding: 5px;
+	font-weight: bold;
+	color: red;
+	font-size: 25px;
+	cursor: pointer;
+}
+.show {
+	opacity: 1;
+	visibility: visible;
+	top: 130px;
+	position: fixed;
+	z-index: 99;
+	background: white;
+}
+
+.bg {
+	background: rgba(42, 42, 42, 0.26);
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+	.modalsection {
+		top: 210px;
+	}
+	.show {
+		top: 200px;
+	}
+}

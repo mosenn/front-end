@@ -1,0 +1,67 @@
+.main-tour {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-tour > section {
+	box-shadow: 5px 5px 5px rgb(219, 190, 190), -5px -5px 5px rgb(175, 218, 231);
+	width: 80%;
+	border-radius: 5px;
+	margin: 15px;
+}
+
+.main-tour > section > div > h3 {
+	margin: 25px 0px;
+}
+.parent-info {
+	height: 0;
+	padding: 15px;
+	margin: 15px 15px;
+	box-shadow: 2px 2px 5px gray;
+}
+.parent-info > p {
+	padding: 5px;
+	line-height: 25px;
+}
+.hide {
+	opacity: 0;
+	transition: 0.4s ease-in-out;
+	visibility: hidden;
+
+	transform: translate(0px, -150px);
+}
+.show {
+	height: 99%;
+	opacity: 1;
+	transition: 0.4s ease-in-out;
+	transform: translate(0px, 0px);
+}
+.parent-btn {
+	margin: 20px 0px;
+}
+.parent-btn button {
+	width: 200px;
+	padding: 15px;
+	margin: 15px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	background: rgb(218, 86, 112);
+	color: white;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+	.main-tour > section > div > article > p {
+		font-size: 0.8rem;
+	}
+	.main-tour > section > div > figure > img {
+		width: 60%;
+	}
+	.main-tour > section {
+		width: 70%;
+	}
+}

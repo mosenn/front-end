@@ -1,0 +1,18 @@
+.container-search {
+	padding: 15px;
+	margin-top: 20px;
+}
+
+.container-search > form > input {
+	padding: 5px;
+	width: 80%;
+	max-width: 600px;
+	border: none;
+	outline: none;
+	border: 1px solid gray;
+}
+.container-search > form > input::placeholder {
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 5px;
+}

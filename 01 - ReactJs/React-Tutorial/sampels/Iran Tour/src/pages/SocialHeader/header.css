@@ -1,0 +1,90 @@
+ul,
+li {
+	list-style-type: none;
+}
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top-menu {
+	margin: 10px;
+	border: 1px solid rgb(95, 117, 168);
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+
+	text-align: center;
+	border-radius: 5px;
+	transition: 0.4s;
+}
+
+.top-menu > li {
+	margin: 5px 0px;
+	cursor: pointer;
+}
+
+.top-menu > li > a:hover span,
+.top-menu > li:hover span {
+	color: rgb(7, 34, 68);
+}
+.top-menu > li > a:hover i,
+.top-menu > li:hover i {
+	color: rgb(69, 58, 168);
+}
+.top-menu > li > a {
+	color: rgb(91, 105, 205);
+	font-size: 20px;
+	padding: 5px;
+	text-decoration: none;
+	font-size: 25px;
+	transform: scale(1);
+	display: flex;
+
+	align-items: center;
+	transition: all 0.4s;
+}
+
+.top-menu > li:nth-of-type(1) a:hover {
+	color: rgb(23, 6, 99);
+	transform: scale(1.2);
+}
+.top-menu > li:nth-of-type(2) a:hover {
+	color: rgb(6, 99, 38);
+	transform: scale(1.2);
+}
+.top-menu > li:nth-of-type(3) a:hover {
+	color: rgb(28, 8, 51);
+	transform: scale(1.2);
+}
+.top-menu > li:nth-of-type(4) a:hover {
+	color: rgb(30, 15, 159);
+	transform: scale(1.2);
+}
+.top-menu > li:nth-of-type(5) a:hover {
+	color: rgb(30, 15, 159);
+	transform: scale(1.2);
+}
+.top-menu > li:nth-of-type(6) a:hover {
+	transform: scale(1.2);
+	color: #cf4379;
+	height: fit-content;
+}
+.top-menu > li:nth-of-type(8) a:hover {
+	transform: scale(1.2);
+	color: #b65a1d;
+	transform: rotate(50deg);
+}
+
+@media screen and (min-width: 768px) {
+	.top-menu {
+		max-width: 60%;
+		margin-top: 15px;
+	}
+	.top-menu {
+		flex-wrap: nowrap;
+	}
+	.top-menu > li {
+		margin-right: 36px;
+	}
+}

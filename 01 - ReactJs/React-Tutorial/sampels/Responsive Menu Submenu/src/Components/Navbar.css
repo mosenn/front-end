@@ -1,0 +1,118 @@
+.parent-logo-fasbar {
+	display: flex;
+	border-bottom: 1px solid rgba(85, 85, 85, 0.377);
+	justify-content: space-around;
+	padding: 15px;
+	border: 1px solid rgb(224, 224, 224);
+	width: 97%;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+	margin-top: 20px;
+}
+
+.Main-Menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px;
+	display: none;
+	font-weight: bold;
+}
+
+.Main-Menu nav {
+	border: 2px solid rgb(159, 176, 212);
+	box-shadow: 3px 3px 10px rgb(148, 147, 147);
+	padding: 15px;
+	width: 100%;
+	position: relative;
+}
+
+.Main-Menu nav ul {
+	display: flex;
+	justify-content: center;
+	width: fit-content;
+}
+
+.Main-Menu nav ul li {
+	margin: 15px 35px;
+	display: flex;
+	cursor: pointer;
+}
+
+.nav-submenu {
+	background: white;
+	border: 1px solid rgba(128, 128, 128, 0.178);
+	border-radius: 5px;
+	position: absolute;
+	top: 7rem;
+	left: 50%;
+	display: none;
+	transition: all 0.4s ease-in-out;
+	margin-top: 15px;
+}
+
+.show-submenu {
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.submenu-center {
+	display: flex;
+
+	padding: 5px;
+	margin-top: 15px;
+	width: 100%;
+	border: 1px solid rgba(41, 111, 149, 0.296);
+}
+.submenu-center > p {
+	font-weight: bold;
+	font-style: italic;
+}
+.nav-submenu h4 {
+	margin: 1.5rem;
+}
+.submenu-center a {
+	color: rgba(72, 23, 179, 0.87);
+	text-transform: capitalize;
+	width: 100%;
+	font-size: 12px;
+	font-weight: bold;
+}
+.parent-a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+.submenu-center svg {
+	color: gray;
+	margin: 0px 15px;
+}
+.none-submenu {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.fas-bars {
+		display: none;
+	}
+	.Main-Menu {
+		display: flex;
+	}
+	.Show {
+		display: none;
+	}
+	.parent-logo-fasbar {
+		justify-content: flex-start;
+	}
+	.parent-logo-fasbar figure {
+		margin-left: 20px;
+	}
+	.nav-submenu {
+		display: flex;
+	}
+	.show-submenu {
+		display: flex;
+	}
+}

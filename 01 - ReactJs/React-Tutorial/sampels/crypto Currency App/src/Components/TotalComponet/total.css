@@ -1,0 +1,27 @@
+.total-nav {
+	margin-top: 130px;
+}
+.total-nav > ul {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.total-nav > ul > li {
+	padding: 7px;
+	margin: 5px;
+	border: 1px solid rgba(128, 128, 128, 0.852);
+	white-space: nowrap;
+	border-radius: 2px;
+	max-width: 420px;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+	.total-nav > ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.total-nav {
+		margin-top: 80px;
+	}
+}

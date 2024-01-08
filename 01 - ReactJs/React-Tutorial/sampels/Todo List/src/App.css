@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.App {
+	text-align: center;
+}
+
+button {
+	width: 100px;
+	margin: 10px 10px;
+	font-weight: bold;
+}
+button[name='edit'] {
+	color: rgb(76, 79, 165);
+	padding: 4px;
+	border: none;
+	border: 1px solid gray;
+	border-radius: 2px;
+}
+
+button[name='remove'] {
+	color: rgb(153, 60, 79);
+	padding: 4px;
+	border: none;
+	border: 1px solid gray;
+	border-radius: 2px;
+}
+
+.wrapper-list {
+	margin-top: 10px;
+	border: 1px solid rgba(128, 128, 128, 0.407);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.wrapper-list > p {
+	margin-top: 10px;
+	padding: 5px;
+	text-align: center;
+}
+
+textarea {
+	resize: none;
+	height: 22px;
+	padding: 5px;
+}
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,94 @@
+footer {
+	background: rgb(49, 43, 79);
+	border-radius: 5px;
+	margin-top: 15px;
+	padding: 15px;
+}
+
+footer > div {
+	text-align: center;
+	padding: 5px;
+}
+footer > div > cite {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.438);
+	padding: 2px;
+	color: white;
+	margin-bottom: 15px;
+	display: inline-block;
+}
+footer > div > cite > span {
+	color: dodgerblue;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+footer > nav {
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+}
+
+footer > nav > ul {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+footer > nav > ul > li {
+	color: white;
+	margin: 5px 0px 10px 0px;
+	display: flex;
+	justify-content: baseline;
+	font-size: 20px;
+}
+footer > nav > ul > li > a {
+	color: white;
+
+	font-size: 20px;
+}
+footer > nav > ul > li > span {
+	margin-right: 20px;
+}
+footer > nav > ul > li > a > span {
+	margin-right: 10px;
+}
+
+.phone-footer {
+	margin-top: 10px;
+}
+footer > nav > ul > li > a > span > svg {
+	margin-right: 5px;
+	transform: translate(0px, 5px);
+}
+
+footer > nav > ul > li > a > span {
+	font-size: 25px;
+}
+footer > nav > ul > li > span {
+	font-size: 20px;
+}
+.animate-type {
+	width: 220px;
+	display: inline-block;
+	text-shadow: 5px 25px 2px rgb(194, 235, 9);
+}
+
+@media screen and (min-width: 768px) {
+	footer > nav > ul > li {
+		font-size: 15px;
+		margin-right: 20px;
+	}
+	footer > nav > ul > li > a {
+		font-size: 15px;
+		width: fit-content;
+	}
+
+	footer > nav {
+		width: 100%;
+	}
+	footer > nav > ul {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+}

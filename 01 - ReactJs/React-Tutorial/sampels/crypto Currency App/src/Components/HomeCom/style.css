@@ -1,0 +1,32 @@
+.maping-data-home {
+	display: grid;
+	margin-top: 50px;
+	gap: 15px;
+	grid-template-columns: repeat(2, 1fr);
+}
+.maping-data-home > div {
+	box-shadow: 5px 5px 15px;
+	padding: 5px;
+	margin: 15px;
+}
+.maping-data-home > div > h4 {
+	margin-top: 10px;
+}
+.maping-data-home > div > figure > img {
+	margin-top: 10px;
+}
+.maping-data-home > div > a {
+	color: rgb(117, 48, 139);
+	font-weight: bold;
+	margin: 15px;
+
+	display: block;
+}
+.maping-data-home > div > a:hover {
+	color: darkblue;
+}
+@media screen and (min-width: 768px) {
+	.maping-data-home {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
