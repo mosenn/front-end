@@ -90,13 +90,15 @@ li {
 }
 
 .custom-scrollbar:hover {
-  opacity: 1; /* Show on hover */
+  opacity: 1;
+  /* Show on hover */
 }
 
 .scroll-handle {
   width: 8px;
   height: 15px !important;
-  background-color: #1abc9c; /* Blue color for the handle */
+  background-color: #1abc9c;
+  /* Blue color for the handle */
   border-radius: 5px;
   transition: background-color 0.3s;
   position: absolute;
@@ -130,4 +132,50 @@ li {
 .scroll-up:hover,
 .scroll-down:hover {
   color: #1abc9c;
+}
+
+img {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+.menu {
+  background: rgb(122, 122, 122);
+  position: fixed;
+  top: 0;
+  width: -webkit-fill-available;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 12px 0;
+  margin: 0 32px;
+  border-radius: 0 0 8px 8px;
+}
+
+.menu li {
+  list-style-type: none;
+  transition: .4s;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #e1e8e7;
+}
+
+.menu li:hover {
+  color: #1bcaa7;
+}
+
+/* @media screen and (min-width: 900px) {} */
+
+@media screen and (min-width: 1366px) {
+  .menu {
+    margin: 0 80px;
+  }
 }

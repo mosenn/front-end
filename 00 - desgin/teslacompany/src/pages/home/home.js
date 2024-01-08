@@ -1,7 +1,7 @@
 const sectionsTags = document.querySelectorAll("div[data-section]");
 const spans = document.querySelectorAll("span[data-pointer]");
 const titleSpans = document.querySelectorAll("div[data-text]");
-console.log(titleSpans);
+
 function setActiveSection(entries) {
   entries.forEach((entry) => {
     const section = entry.target;

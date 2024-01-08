@@ -1,1 +1,24 @@
-@import url(../../assets//css//main.css);
+@import url(../../assets/css/main.css);
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 32px 32px 32px
+}
+
+
+
+
+
+@media screen and (min-width: 1366px) {
+    .content {
+        padding: 120px 80px 32px 80px
+    }
+}
