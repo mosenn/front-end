@@ -1,0 +1,55 @@
+@font-face {
+	font-family: iranl;
+	src: url('/public/fonts/IRANSansWeb.ttf');
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: iranl;
+}
+body,
+html {
+	font-family: iranl;
+	direction: rtl;
+}
+body {
+	background-color: #e4e4e4;
+}
+form {
+	background-color: #fcfcfe;
+	box-shadow: 1px 1px 5px 1px gray;
+	width: 90%;
+	max-width: 600px;
+}
+
+form > input {
+	outline: none;
+	border: none;
+	border: 1px solid rgba(76, 76, 135, 0.44);
+	padding: 8px;
+	margin: 5px 10px;
+}
+form > input::placeholder {
+	font-weight: bold;
+}
+form > input:focus {
+	border: 2px solid rgba(76, 76, 135, 0.874);
+}
+button {
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	border: 1px solid rgba(76, 76, 135, 0.874);
+	transition: 0.4s;
+	padding: 7px;
+	margin: 5px 10px;
+	font-size: 1rem;
+	cursor: pointer;
+
+}
+button:enabled:hover {
+	background-color: rgba(36, 36, 117, 0.827);
+	color: #fcfcfc;
+}

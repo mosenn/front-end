@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about tesla</title>
+    <link rel="stylesheet" href="about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  </head>
+  <body>
+    <!-- loading -->
+    <div data-loading="loading">
+      <span class="loading" id="type-writer"></span>
+    </div>
+    <!-- main content -->
+    <main data-main="main">
+      <!-- content -->
+      <div data-content="content">
+        <h1>about</h1>
+        <p style="height: 200vh">lorem</p>
+      </div>
+      <!-- costume  cursor -->
+      <div id="outerCircle">
+        <div id="innerCircle"></div>
+      </div>
+      <!-- costume scroll-bar -->
+      <div class="custom-scrollbar" id="customScrollBar">
+        <div class="scroll-handle" id="scrollHandle"></div>
+        <div class="scroll-up" id="scrollUp">
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+        <div class="scroll-down" id="scrollDown">
+          <i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="about.js"></script>
+  </body>
+</html>

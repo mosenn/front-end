@@ -1,0 +1,42 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #fff; /* Change arrow color */
+  background-color: #333; /* Change background color */
+}
+
+@media screen and (min-width: 1366px) {
+  .swiper-slide img {
+    display: block;
+    width: 85vh;
+    height: 76vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .swiper-slide img {
+    width: 100vh;
+    height: 100vh;
+  }
+}

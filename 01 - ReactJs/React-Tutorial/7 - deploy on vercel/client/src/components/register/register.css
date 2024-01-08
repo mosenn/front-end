@@ -1,0 +1,7 @@
+button:hover {
+    background-color:rgb(104, 104, 180) !important;
+}
+
+.submitBtn:disabled {
+    background: #000 !important;
+}

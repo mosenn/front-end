@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scroll Sections</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: background-color 0.5s ease;
+        width: 50%;
+        margin-left: 100px;
+      }
+
+      .active {
+        background-color: yellow;
+      }
+
+      #section1 {
+        background-color: lightblue;
+      }
+
+      #section2 {
+        background-color: lightgreen;
+      }
+
+      #section3 {
+        background-color: lightpink;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+      .box-point {
+        border: 1px solid red;
+        position: fixed;
+        top: 0;
+      }
+      .pointer .spanactive {
+        background: red;
+        z-index: 100;
+        color: green;
+      }
+      .spanactive {
+        background: red;
+        z-index: 100;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="sectiontag" data-section="section" data-type="0">
+      <h1>Section 1</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section
+      class="sectiontag"
+      data-section="section"
+      data-type="1"
+      data-aos=""
+    >
+      <h1>Section 2</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="sectiontag" data-section="section" data-type="2">
+      <h1>Section 3</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <div class="box-point">
+      <!-- point 1 -->
+      <div>
+        <p>
+          <span class="pointer" data-pointer="pointer" data-type="0">
+            tesla company
+          </span>
+        </p>
+      </div>
+      <!-- point 2 -->
+
+      <div>
+        <p>
+          <span class="pointer" data-pointer="pointer" data-type="1">
+            services</span
+          >
+        </p>
+      </div>
+
+      <!-- point 3 -->
+      <div>
+        <p>
+          <span
+            id="product"
+            class="pointer"
+            data-pointer="pointer"
+            data-type="2"
+            >product</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // ------------------
+      const sectionsTags = document.querySelectorAll("section[data-section]");
+      const spans = document.querySelectorAll("span[data-pointer]");
+      const spanProduct = document.querySelector("#product");
+      console.log(spanProduct, "spanProduct");
+      spanProduct;
+
+      function setActiveSection(entries) {
+        entries.forEach((entry) => {
+          const section = entry.target;
+
+          if (entry.isIntersecting) {
+            // Get the data-type attribute of the section
+            const sectionType = section.getAttribute("data-type");
+
+            // add class for spans
+
+            spans.forEach((span, spanIndex) => {
+              const spanType = span.getAttribute("data-type");
+              console.log(spanType == sectionType);
+              if (spanType === sectionType) {
+                // Do something with the spans, for example, log the data-type
+
+                span.classList.add("spanactive");
+              } else {
+                span.classList.remove("spanactive");
+              }
+            });
+
+            section.classList.add("active");
+          } else {
+            section.classList.remove("active");
+          }
+        });
+      }
+
+      const observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5,
+      };
+
+      const observer = new IntersectionObserver(
+        setActiveSection,
+        observerOptions
+      );
+
+      sectionsTags.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>

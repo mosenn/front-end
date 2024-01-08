@@ -1,0 +1,16 @@
+.containerArrow {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  color: rgba(12, 245, 12, 0.667);
+  padding: 15px;
+  height: 100vh;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid red;
+ 
+}

@@ -1,0 +1,16 @@
+
+body {
+    background: rgb(248, 248, 248);
+}
+a { 
+    color:blue;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+}
+.dash{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

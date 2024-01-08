@@ -1,0 +1,153 @@
+@import url(../../assets/css/main.css);
+main {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+}
+.container .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper > section:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(250, 250, 250);
+  width: 100%;
+  padding: 15px;
+  margin: 8px;
+  /* background: blue; */
+}
+.wrapper > section:nth-of-type(1) {
+  display: none;
+}
+
+.text-container > div > h1 {
+  margin: 20px 0px;
+  font-size: 2rem;
+}
+.wrapper-point-title {
+  display: flex;
+
+  position: fixed;
+  left: 10px;
+  top: 10%;
+}
+/* text title */
+.text-title {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* pointers  */
+
+.box-point {
+  /* position: fixed; */
+
+  left: 70px;
+  top: 10%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+.box-point > div {
+  display: flex;
+
+  position: relative;
+}
+
+.box-point > div > p {
+  border: 3px solid rgb(243, 243, 243);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+.box-point > div > p > span {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+}
+.box-point > div > p > span::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  width: 1px;
+  height: 40px;
+  border-right: 2px dashed #e1e8e7;
+}
+
+.box-point > div:nth-of-type(4) > p > span::before {
+  background: blue;
+  content: none;
+}
+
+/* scroll effect */
+.spanactive {
+  background: #1bcaa7;
+}
+.text-title > div {
+  opacity: 0;
+  visibility: 0;
+  transform: translate(-20px, 0);
+  transition: 0.4s;
+}
+.text-title > div.titleSpanActive {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0);
+}
+
+/**Responsive Scope */
+@media screen and (min-width: 900px) {
+  .container {
+    width: 90%;
+  }
+  .wrapper > section:nth-of-type(2) {
+    display: flex;
+  }
+  .wrapper > section:nth-of-type(1) {
+    display: flex;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .box-point > div > p > span::before {
+    top: 150%;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .box-point > div > p > span::before {
+    top: 150%;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .box-point > div > p > span::before {
+    top: 50%;
+    height: 44px;
+  }
+}

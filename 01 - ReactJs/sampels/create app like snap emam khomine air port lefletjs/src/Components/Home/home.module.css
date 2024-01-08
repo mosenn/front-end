@@ -1,0 +1,72 @@
+.homeparent {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.homeparent > form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 50%;
+}
+
+.homeparent > form > button {
+	background-color: rgba(58, 58, 136, 0.827);
+	color: #fcfcfc;
+}
+.MassageSucces {
+	background-color: rgb(93, 172, 125);
+	border-radius: 5px;
+	color: rgb(23, 10, 52);
+	position: relative;
+	text-align: center;
+	margin: 5px 10px;
+
+	padding: 6px;
+	opacity: 0;
+	animation: succesanimate 1s ease-in-out forwards;
+}
+
+.error {
+	background-color: rgba(201, 57, 57, 0.867);
+	color: #fefefe;
+	animation: succesanimate 1s ease-in-out forwards;
+	margin: 5px 10px;
+	border-radius: 5px;
+	padding: 6px;
+	opacity: 0;
+	text-align: center;
+}
+
+@keyframes succesanimate {
+	from {
+		opacity: 0;
+		transform: translate(0px, -15px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+.MassageSucces::after {
+	content: '';
+	position: absolute;
+	background-color: red;
+	width: 1%;
+	height: 5px;
+	bottom: 0;
+	left: 0;
+	border-radius: 5px;
+	animation: loadpage 3s ease-in-out forwards;
+}
+
+@keyframes loadpage {
+	from {
+		width: 0%;
+	}
+	to {
+		width: 100%;
+	}
+}

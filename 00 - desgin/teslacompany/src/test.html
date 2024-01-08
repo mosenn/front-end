@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Scrollbar</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      .custom-scrollbar {
+        position: fixed;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        transition: opacity 0.5s;
+        border: 1px solid red;
+      }
+
+      .custom-scrollbar:hover {
+        opacity: 1; /* Show on hover */
+      }
+
+      .scroll-handle {
+        width: 8px;
+        height: 15px !important;
+        background-color: #3498db; /* Blue color for the handle */
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        position: absolute;
+        top: 0;
+      }
+
+      .scroll-up,
+      .scroll-down {
+        width: 10px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #2ecc71; /* Green color for the arrows */
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        transition: background-color 0.3s;
+        position: absolute;
+      }
+
+      .scroll-up {
+        top: -30px;
+      }
+
+      .scroll-down {
+        bottom: -30px;
+      }
+
+      .scroll-up:hover,
+      .scroll-down:hover {
+        background-color: #1abc9c; /* Darker green color on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="custom-scrollbar" id="customScrollBar">
+      <div class="scroll-handle" id="scrollHandle"></div>
+      <div class="scroll-up" id="scrollUp">↑</div>
+      <div class="scroll-down" id="scrollDown">↓</div>
+    </div>
+
+    <!-- Your content goes here -->
+    <div style="height: 200vh; background-color: #f0f0f0; padding: 20px">
+      <p>Your content here...</p>
+
+      <div class="h1" data-post-id="0" data-post-status="false">
+        <h1>product</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+      </div>
+      <div class="h1" data-post-id="1" data-post-status="false">
+        <h1>service</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+      </div>
+      <div class="h1" data-post-id="2" data-post-status="false">
+        <h1>contact us</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        expedita iste quo rem corrupti ullam, veritatis voluptatibus numquam
+        illo tempore doloribus totam similique cumque, voluptatem saepe. Odit ut
+        suscipit natus. Eos omnis cumque, ducimus, delectus ex quod architecto
+        autem tempora, doloribus suscipit hic iure culpa iste reprehenderit quae
+        sed quaerat? Accusamus a quidem fugiat eos, cumque dolor quis delectus
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const customScrollBar = document.getElementById("customScrollBar");
+        const scrollHandle = document.getElementById("scrollHandle");
+        const scrollUp = document.getElementById("scrollUp");
+        const scrollDown = document.getElementById("scrollDown");
+
+        let autoScrollInterval;
+        let mouseY;
+
+        document.addEventListener("wheel", function (event) {
+          const delta = Math.sign(event.deltaY);
+          const scrollAmount = 50;
+
+          window.scrollBy(0, delta * scrollAmount);
+          updateScrollHandle();
+        });
+
+        document.addEventListener("touchstart", function (event) {
+          //   mouseY = event.touches[0].clientY;
+          if (event.target === scrollUp) {
+            startAutoScroll(-50);
+          } else if (event.target === scrollDown) {
+            startAutoScroll(50);
+          }
+        });
+        document.addEventListener("touchend", function (event) {
+          if (event.target === scrollUp || event.target === scrollDown) {
+            stopAutoScroll();
+          }
+        });
+        document.addEventListener("touchmove", function (event) {
+          event.preventDefault();
+
+          const touchY = event.touches[0].clientY;
+          const deltaMouseY = mouseY - touchY;
+          mouseY = touchY;
+
+          const scrollSpeed = 5;
+          window.scrollBy(0, deltaMouseY * scrollSpeed);
+          updateScrollHandle();
+        });
+
+        scrollUp.addEventListener("mousedown", function () {
+          startAutoScroll(-50);
+        });
+
+        scrollDown.addEventListener("mousedown", function () {
+          startAutoScroll(50);
+        });
+
+        document.addEventListener("mouseup", function () {
+          stopAutoScroll();
+        });
+
+        function startAutoScroll(amount) {
+          autoScrollInterval = setInterval(function () {
+            window.scrollBy(0, amount);
+            updateScrollHandle();
+          }, 50);
+        }
+
+        function stopAutoScroll() {
+          clearInterval(autoScrollInterval);
+        }
+
+        function updateScrollHandle() {
+          const scrollPercentage =
+            (window.scrollY /
+              (document.body.scrollHeight - window.innerHeight)) *
+            100;
+          const handleHeight =
+            (window.innerHeight / document.body.scrollHeight) * 100;
+
+          const isAtBottom =
+            window.scrollY + window.innerHeight >= document.body.scrollHeight;
+          const isAtTop = window.scrollY === 0;
+
+          if (isAtBottom) {
+            scrollHandle.style.top = "auto";
+            scrollHandle.style.bottom = "0";
+          } else if (isAtTop) {
+            scrollHandle.style.top = "0";
+            scrollHandle.style.bottom = "auto";
+          } else {
+            scrollHandle.style.top = scrollPercentage + "%";
+            scrollHandle.style.bottom = "auto";
+          }
+
+          scrollHandle.style.height = handleHeight + "%";
+        }
+
+        window.addEventListener("scroll", updateScrollHandle);
+        updateScrollHandle(); // Initial update
+      });
+
+      // -----
+      let screenPosition = window.innerHeight;
+
+      function animationAcademy() {
+        let posts = document.querySelectorAll(".h1");
+        posts.forEach((post, index) => {
+          let postCoordinates = post.getBoundingClientRect().top;
+          console.log(post.getAttribute("data-post-id"));
+          console.log(index);
+          if (postCoordinates < screenPosition) {
+            if (index == post.getAttribute("data-post-id")) {
+              post.style.color = "red";
+            }
+          }
+        });
+      }
+
+      window.addEventListener("scroll", animationAcademy);
+    </script>
+  </body>
+</html>

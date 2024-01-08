@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+a { 
+  color:blue;
+  padding: 4px;
+  margin:4px;
+}

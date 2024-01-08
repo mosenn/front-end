@@ -1,0 +1,11 @@
+.green { 
+color:green; 
+} 
+.gray {
+ color:rgb(221, 176, 176);
+  text-decoration-line: line-through;
+}
+p {
+  width: fit-content;
+  padding: 5px;
+}

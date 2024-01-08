@@ -1,0 +1,214 @@
+/* required styles */
+
+.MainContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.MainContainer > form {
+	/* background-color: aqua; */
+	display: flex;
+	flex-direction: column;
+	background: none;
+	margin: 10px 10px;
+	box-shadow: 0px 0px 0px 0px;
+}
+.MainContainer > form > input {
+	margin: 5px 10px;
+	padding: 8px;
+	border-radius: 4px;
+}
+.MainContainer > form > button {
+	background-color: rgba(58, 58, 136, 0.827);
+	color: #fcfcfc;
+}
+.MainContainer > form > button:hover {
+	background-color: rgba(243, 243, 243, 0.827);
+	color: #282828;
+}
+.parentmapVechilename {
+	width: 100%;
+	max-width: 600px;
+	background-color: #e5e5e5;
+}
+
+.mapingVechilesName {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 19px;
+	background-color: #d8d8d8;
+	border-radius: 3px;
+}
+.mapingVechilesName > button {
+	display: flex;
+	align-items: center;
+	background-color: #fc5a5a;
+	color: #e5e5e5;
+	transition: 0.4s;
+	padding: 5px;
+	font-size: 0.8rem;
+	border: none;
+}
+
+.mapingVechilesName > button:hover {
+	background-color: #c41b1b;
+}
+
+.mapingVechilesName > button > svg {
+	margin-left: 5px;
+}
+.mainMapingandForm {
+	width: 100%;
+	max-width: 600px;
+}
+
+.parentBtnLatLang {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	padding: 5px;
+	border-radius: 2px;
+	background: rgb(187, 187, 187);
+}
+.parentBtnLatLang > form {
+	background: none;
+	box-shadow: none;
+
+	justify-content: center;
+	display: flex;
+	width: 100%;
+	margin: 10px 0px;
+}
+.parentBtnLatLang > form > button {
+	font-size: 0.9rem;
+}
+.nameIcon {
+	display: flex;
+	align-items: center;
+	width: 90px;
+	justify-content: space-evenly;
+}
+
+.ParentLatLng {
+	width: 100%;
+}
+.ParentLatLng > div {
+	margin-right: 10px;
+}
+
+.ParentMssageSucess {
+	font-size: 0.8rem;
+	padding: 5px;
+	border-radius: 5px;
+	color: rgb(23, 10, 52);
+	background-color: rgb(93, 172, 125);
+	position: absolute;
+	text-align: center;
+	margin: 5px 10px;
+	padding: 8px;
+	opacity: 0;
+	animation: succesanimate 1s ease-in-out forwards;
+}
+.erroMssage {
+	background-color: #c96615;
+	color: #e5e5e5;
+	font-size: 0.8rem;
+	padding: 8px;
+	border-radius: 5px;
+	position: absolute;
+	text-align: center;
+	margin: 5px 10px;
+	padding: 6px;
+	opacity: 0;
+	animation: succesanimate 1s ease-in-out forwards;
+}
+@keyframes succesanimate {
+	from {
+		opacity: 0;
+		transform: translate(0px, -15px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0px, 0px);
+	}
+}
+
+.validate {
+	margin-top: 20px;
+
+	color: #f37a68;
+	font-weight: bold;
+	font-size: 0.9rem;
+	padding: 8px;
+	border-radius: 5px;
+}
+.PopUp {
+	position: fixed;
+	top: 0;
+	background-color: #e5e5e5;
+	box-shadow: 1px 1px 5px 1px gray;
+	font-size: 0.8rem;
+	padding: 10px;
+	margin: 5px 10px;
+	text-align: center;
+	max-width: 600px;
+	opacity: 0;
+	z-index: 9999;
+	height: 100vh;
+	animation: popup 1s ease-in-out forwards;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.PopUp > p {
+	line-height: 30px;
+}
+.PopUp > button {
+	background-color: #fc5a5a;
+	padding: 5px;
+	width: 200px;
+	margin: 15px 0px;
+	color: #e5e5e5;
+	border: none;
+}
+
+.PopUp > button:hover {
+	background-color: rgb(207, 57, 57);
+}
+@keyframes popup {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.mapingVechilesName {
+		margin: 10px 0px;
+	}
+	.parentBtnLatLang {
+		flex-direction: row-reverse;
+	}
+	.ParentLatLng {
+		display: flex;
+		justify-content: flex-start;
+	}
+	.ParentLatLng > div {
+		align-items: center;
+		width: 100%;
+	}
+	.parentBtnLatLang > form {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.parentBtnLatLang > form > button {
+		font-size: 0.8rem;
+	}
+}
